@@ -9,7 +9,7 @@ export default function Topbar() {
             <span className="logo">RealSNS</span>
         </div>
         <div className="topbarCenter">
-            <div className="serachbar">
+            <div className="searchbar">
                 <Search className="searchIcon" />
                 <input 
                     type="text" 
@@ -19,14 +19,17 @@ export default function Topbar() {
             </div>
         </div>
         <div className="topbarRight">
-            <div className="topbarIconItem">
-                <Chat />
-                <span className="topbarIconBadge">1</span>
-            </div>
-            <div className="topbarIconItem">
-                <Notifications />
-                <span className="topbarIconBadge">2</span></div>
+            <div className="topbarItemIcons">
+                <div className="topbarIconItem">
+                    <Chat />
+                    <span className="topbarIconBadge">1</span>
+                </div>
+                <div className="topbarIconItem">
+                    <Notifications />
+                    <span className="topbarIconBadge">2</span>
+                </div>
             <img src="/assets/person/1.jpeg" alt=""className="topbarimg" />
+            </div>
         </div>
     </div>
   )
