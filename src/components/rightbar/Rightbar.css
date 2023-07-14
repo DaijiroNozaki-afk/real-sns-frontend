@@ -67,3 +67,18 @@
     left: 0;
     border: 2px solid white;
 }
+
+.promotionTitle {
+    font-size: 15px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+.rightbarPromotionImg {
+    width: 85%;
+    border-radius: 10px;
+    margin-bottom: 25px 0;
+}
+.promotionName {
+    font-size: small;
+    color: rgb(67, 67, 67);
+}
