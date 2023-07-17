@@ -47,26 +47,18 @@ export default function Rightbar({ profile }) {
               <img src="./assets/person/1.jpeg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Shin Code</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img src="./assets/person/2.jpeg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Yamaki</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img src="./assets/person/3.jpeg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Koga</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img src="./assets/person/4.jpeg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Matsukubo</span>
             </div>
-          </div>
-          <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img src="./assets/person/5.jpeg" alt="" className="rightbarFollowingImg" />
               <span className="rightbarFollowingName">Ohta</span>
