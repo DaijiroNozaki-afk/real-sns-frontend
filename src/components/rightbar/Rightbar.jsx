@@ -4,10 +4,10 @@ import { Users } from "../../dummyData";
 import Online from '../online/Online';
 // import { Online } from "../online/Online";
 
-export default function Rightbar() {
-  return (
-    <div className='rightbar'>
-      <div className="rightbarWrapper">
+export default function Rightbar({ profile }) {
+  const HomeRightbar = () => {
+    return (
+      <>
         <div className="eventContainer">
           <img src="./assets/star.png" alt="" className="starImg" />
           <span className="eventText">
@@ -28,6 +28,22 @@ export default function Rightbar() {
         <p className="promotionName">カーショップ</p>
         <img src="./assets/promotion/promotion3.jpeg" alt="" className="rightbarPromotionImg" />
         <p className="promotionName">ShinCode株式会社</p>
+      </>
+    );
+  }
+
+  const ProfileRightBar = () => {
+    return (
+      <>
+        Profile のRightbar です。
+      </>
+    )
+  }
+  return (
+    <div className="rightbar">
+      <div className="rithbarWrapper">
+        {profile ? <ProfileRightBar /> : <HomeRightbar />}
+
       </div>
     </div>
   )
