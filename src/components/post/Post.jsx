@@ -4,6 +4,8 @@ import { MoreVert } from '@mui/icons-material'
 import { Users } from "../../dummyData";
 
 export default function Post({ post }) {
+    const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER 
+
     const [like, setLike] = useState(post.like);
     const [isLiked, setIsLiked] = useState(false);
 
@@ -16,7 +18,7 @@ export default function Post({ post }) {
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
-                    <img src={Users.filter((user) => user.id === post.id)[0].profilePicture}
+                    <img src={PUBLIC_FOLDER + Users.filter((user) => user.id === post.id)[0].profilePicture}
                         alt=""
                         className='postProfileImg' />
                     <span className="postUsername">
@@ -30,11 +32,11 @@ export default function Post({ post }) {
             </div>
             <div className="postCenter">
                 <span className="postText">{post.desc}</span>
-                <img src={post.photo} alt="" className="postImg" />
+                <img src={PUBLIC_FOLDER + post.photo} alt="" className="postImg" />
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
-                    <img src="./assets/heart.png" alt="" className="likeIcon"
+                    <img src={PUBLIC_FOLDER + "/heart.png"} alt="" className="likeIcon"
                         onClick={() => handleLike()}
                     />
                     <span className="postLikeCounter">
