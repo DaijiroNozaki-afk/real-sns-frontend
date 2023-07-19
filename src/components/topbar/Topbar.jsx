@@ -1,12 +1,15 @@
 import { Chat, Notifications, Search } from "@mui/icons-material";
 import "./Topbar.css";
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
     <div className="topbarContainer">
         <div className="topbarLeft">
-            <span className="logo">RealSNS</span>
+            <Link to="/">
+                <span className="logo">RealSNS</span>
+            </Link>
         </div>
         <div className="topbarCenter">
             <div className="searchbar">
