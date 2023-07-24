@@ -26,9 +26,9 @@ export default function Rightbar({ profile }) {
         <p className="promotionTitle">プロモーション広告</p>
         <img src={PUBLIC_FOLDER + "/promotion/promotion1.jpeg"} alt="" className="rightbarPromotionImg" />
         <p className="promotionName">ショッピング</p>
-        <img src={PUBLIC_FOLDER + "/assets/promotion/promotion2.jpeg"} alt="" className="rightbarPromotionImg" />
+        <img src={PUBLIC_FOLDER + "/promotion/promotion2.jpeg"} alt="" className="rightbarPromotionImg" />
         <p className="promotionName">カーショップ</p>
-        <img src={PUBLIC_FOLDER + "/assets/promotion/promotion3.jpeg"} alt="" className="rightbarPromotionImg" />
+        <img src={PUBLIC_FOLDER + "/promotion/promotion3.jpeg"} alt="" className="rightbarPromotionImg" />
         <p className="promotionName">ShinCode株式会社</p>
       </>
     );
