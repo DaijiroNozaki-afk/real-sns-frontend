@@ -14,7 +14,7 @@ export default function TimeLine() {
       setPosts(response.data);
     }
     fetchPosts();
-  },)
+  },[])
 
   return (
     <div className='timeline'>

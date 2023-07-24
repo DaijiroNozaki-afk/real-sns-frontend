@@ -17,7 +17,7 @@ export default function Post({ post }) {
         setUser(response.data);
       }
       fetchUser();
-    },)
+    },[])
     const handleLike = () => {
         setLike(isLiked ? like - 1: like + 1);
         setIsLiked(!isLiked)
