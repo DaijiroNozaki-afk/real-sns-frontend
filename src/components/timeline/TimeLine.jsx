@@ -5,11 +5,13 @@ import Post from '../post/Post';
 // import { Posts } from "../../dummyData";
 import axios from "axios"
 
-export default function TimeLine() {
+export default function TimeLine({ username }) {
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get("/posts/timeline/64a4df423074c2dfa5b8dcaa");
+      const response = username
+        ? await axios.get(`/posts/profile/${username}`)
+        : await axios.get("/posts/timeline/64a4df423074c2dfa5b8dcaa");
       // console.log(response);
       setPosts(response.data);
     }
