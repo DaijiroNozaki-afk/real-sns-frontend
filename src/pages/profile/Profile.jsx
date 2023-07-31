@@ -5,16 +5,19 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import TimeLine from '../../components/timeline/TimeLine'
 import Rightbar from '../../components/rightbar/Rightbar'
 import axios from "axios"
+import { useParams } from 'react-router-dom';
 
 export default function Profile() {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER 
 
   const [user, setUser] = useState({})
+  const username = useParams().username
+  // console.log(username)
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get(`/users?username=shincode`);
-      console.log(response);
+      const response = await axios.get(`/users?username=${username}`);
+      // console.log(response);
       setUser(response.data);
     }
     fetchUser();
@@ -38,7 +41,7 @@ export default function Profile() {
 
             </div>
             <div className="profileRightBottom">
-                <TimeLine username="shincode" />
+                <TimeLine username={username} />
                 <Rightbar user={user} />
             </div>
         </div>
