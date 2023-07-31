@@ -5,6 +5,7 @@ import Post from '../post/Post';
 // import { Posts } from "../../dummyData";
 import axios from "axios"
 
+
 export default function TimeLine({ username }) {
   const [posts, setPosts] = useState([])
   useEffect(() => {
