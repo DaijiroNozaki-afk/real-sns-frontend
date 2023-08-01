@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react"
-import { AuthReducer } from "./AuthReducer"
+import AuthReducer from "./AuthReducer"
 
 //最初のユーザー状態を定義
 const initialState = {
@@ -21,7 +21,7 @@ export const AuthContextProvider = ({ children }) => {
                 dispatch,
             }}
         >
-            {children}
+            {children} //←APP /に相当する
         </AuthContext.Provider>
     )
 }
