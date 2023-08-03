@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
         dispatch,
       }}
     >
-      {children} //←APP /に相当する
+      {children}
     </AuthContext.Provider>
   );
 };
