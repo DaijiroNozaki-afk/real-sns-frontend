@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Post.css';
 import { MoreVert } from '@mui/icons-material';
 // import { Users } from "../../dummyData";
 import axios from 'axios';
 import { format } from 'timeago.js';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../state/AuthContext';
 
 export default function Post({ post }) {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -14,6 +15,8 @@ export default function Post({ post }) {
 
   const [user, setUser] = useState({});
 
+  const { user: currentUser } = useContext(AuthContext);
+
   useEffect(() => {
     const fetchUser = async () => {
       const response = await axios.get(`/users?userId=${post.userId}`);
@@ -22,7 +25,13 @@ export default function Post({ post }) {
     };
     fetchUser();
   }, [post.userId]);
-  const handleLike = () => {
+  const handleLike = async () => {
+    try {
+      //いいねのAPI を叩いていく
+      await axios.put(`/posts/${post._id}/like`, { userId: currentUser._id });
+    } catch (err) {
+      console.log(err);
+    }
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
